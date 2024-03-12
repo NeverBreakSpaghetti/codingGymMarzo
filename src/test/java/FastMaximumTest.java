@@ -16,44 +16,34 @@ public class FastMaximumTest {
 
     @Test
     public void firstAcceptanceTest(){
-        int[] input = new int[]{10, 8, 1};
+        Sequence sequence = new Sequence(10, 8, 1);
         FastMaximum fastMaximum = new FastMaximum();
-        int[] sequence = fastMaximum.generateSequence(input);
 
-        int maxElement =  fastMaximum.findPeak(sequence);
-
-        assertEquals(7, maxElement);
+        assertEquals(7, fastMaximum.findPeak(sequence));
     }
 
     @Test
     public void secondAcceptanceTest(){
-        int[] input = new int[]{100000, 60500, 50};
+        Sequence sequence = new Sequence(100000, 60500, 50);
         FastMaximum fastMaximum = new FastMaximum();
-        int[] sequence = fastMaximum.generateSequence(input);
 
-        int maxElement =  fastMaximum.findPeak(sequence);
-
-        assertEquals(3024950, maxElement);
+        assertEquals(3024950, fastMaximum.findPeak(sequence));
     }
 
     @Test
     public void thirdAcceptanceTest(){
-        int[] input = new int[]{100000000, 70000000, 20};
+        Sequence sequence = new Sequence(100000000, 70000000, 20);
         FastMaximum fastMaximum = new FastMaximum();
-        int[] sequence = fastMaximum.generateSequence(input);
 
-        int maxElement =  fastMaximum.findPeak(sequence);
 
-        assertEquals(1399999980, maxElement);
+        assertEquals(1399999980, fastMaximum.findPeak(sequence));
     }
     @Test
-    public void pippo(){
-        int[] input = new int[]{1, 0, 1};
+    public void oneElementTest(){
+        Sequence sequence = new Sequence(1, 0, 1);
         FastMaximum fastMaximum = new FastMaximum();
-        int[] sequence = fastMaximum.generateSequence(input);
 
-        int maxElement =  fastMaximum.findPeak(sequence);
 
-        assertEquals(0, maxElement);
+        assertEquals(0, fastMaximum.findPeak(sequence));
     }
 }
